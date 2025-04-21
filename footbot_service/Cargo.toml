@@ -1,0 +1,13 @@
+[package]
+name = "footbot_service"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+openssl = { version = "0.10.35", features = ["vendored"] }
+lambda_runtime = "0.13.0"
+reqwest = { version = "0.12.15", features = ["json"] }
+serde_json = "1.0.140"
+tokio = { version = "1.44.2", features = ["macros"] }
+tracing = { version = "0.1.41", features = ["log"] }
+tracing-subscriber = { version = "0.3.19", default-features = false, features = ["env-filter", "fmt"] }
