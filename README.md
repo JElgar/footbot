@@ -4,7 +4,17 @@ Sends whatsapp message every week to get sign ups for next week and remind peopl
 
 ## Build and deploy
 
+### Build service
+
 ```
-cd footbot_service && cargo lambda build --release --arm64 --output-format zip
-cd footbot_infra && npm run deploy
+cd footbot_service
+export WAPI_TOKEN=<YOUR_TOKEN>
+cargo lambda build --release --arm64 --output-format zip
+```
+
+```
+cd footbot_infra
+export AWS_ACCESS_KEY_ID=<>
+export AWS_SECRET_ACCESS_KEY=<>
+npm run deploy
 ```
